@@ -322,7 +322,7 @@ body {
 }
 
 .portfolio-list__content {
-    padding: 24px 20px;
+    padding: 20px 24px;
     border-left: 1px solid var(--color-bright-gray);
     border-right: 1px solid var(--color-bright-gray);
     border-bottom: 1px solid var(--color-bright-gray);   
