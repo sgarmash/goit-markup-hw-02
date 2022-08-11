@@ -354,6 +354,10 @@ body {
     color: var(--color-white);
 }
 
+.address {
+    font-style: normal;
+}
+
 .address-description {
     margin-bottom: 9px;
     font-size: 14px;
