@@ -1,15 +1,9 @@
 /* Basic style reset */
-
-a { text-decoration: none; }
-
-ul, ol { 
+.link {text-decoration: none;}
+.list {
     margin: 0;
-    padding: 0;  
-}
-
-ul li,
-ol li {
-    list-style: none;
+    padding: 0;
+    list-style: none;  
 }
 
 h1, 
@@ -28,6 +22,11 @@ button {
     cursor: pointer;
 }
 
+.thumbnail {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
 /* Custom properties */
 
 :root {
@@ -38,13 +37,15 @@ button {
     --color-white-smoke: #F5F5F5;
     --color-white-solid: #F5F4FA;
     --color-blue: #2196F3;
+    --persian-blue: #188CE8;
     --color-bright-gray: #ECECEC
 }
 
 /* Styles for the container that centers the content */
 
 body { 
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--color-white);
     color: var(--color-silver); 
 }
 
@@ -115,9 +116,9 @@ body {
 
 .header-menu__link:hover,
 .header-menu__link:focus,
-.header-menu__link:focus-visible { 
+.header-menu__link:focus-visible,
+.header-menu__link.is-active { 
     color: var(--color-blue);
-    outline: none; 
 }
 
 .header-contact {
@@ -158,7 +159,6 @@ body {
 .header-contact__link:focus,
 .header-contact__link:focus-visible { 
     color: var(--color-blue);
-    outline: none; 
 }
 
 /* Inner title for section */
@@ -208,11 +208,11 @@ body {
 }
 
 .tabs-item__button:hover,
+.tabs-item__button:focus,
 .tabs-item__button:focus-visible {
     color: var(--color-white);
     background-color: var(--color-blue);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-    outline: none;
 }
 
 /* Styles for the banner section element */
@@ -250,12 +250,18 @@ body {
     border-radius: 4px;
 }
 
+.order-service:hover,
+.order-service:focus {
+    background: var(--persian-blue);
+}
+
+.features {padding-top: 94px;}
+
 /* Styles for the About us section element */
 
 .about-us__list {
     display: flex;
-    margin-bottom: 94px;
-    gap: 50px;
+    gap: 30px;
 }
 
 .about-us__title {
@@ -309,10 +315,6 @@ body {
 }
 
 /*  Styles for the portfolio element*/
-
-.portfolio-list__image {
-    display: block;
-}
 
 .portfolio-list__item {
     flex-grow: 1;
