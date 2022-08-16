@@ -24,6 +24,7 @@ button {
 
 .thumbnail {
     max-width: 100%;
+    height: auto;
     vertical-align: middle;
 }
 
